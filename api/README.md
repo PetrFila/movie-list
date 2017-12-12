@@ -9,3 +9,8 @@
 
 * Troubleshooting
   * If you can't access the form parameters in `req.body` that were sent through as a POST request to the endpoint, then ensure that you have setup `body-parser` correctly.
+
+
+* adding authentication to the application
+  * ``` yarn add passport passport-local passport-local-mongoose ```
+  

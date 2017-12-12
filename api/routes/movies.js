@@ -5,7 +5,17 @@ const Person = require('../model/person');
 const router = express.Router()
 //const render = (movies) => {res.json({movies}) };
 
-router.get('/', (req, res) => {
+const authorize = (req, res) => {
+  if(req.user) {
+    next();
+  } else {
+    res.status(403).end();
+  }
+}
+
+
+
+router.get('/', authorize, (req, res) => {
   Movie.find()
     .populate('director')
     .populate('crew.person')

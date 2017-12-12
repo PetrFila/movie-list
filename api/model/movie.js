@@ -11,15 +11,16 @@ const person = { type: ObjectID, ref: 'Person' };
 
 const MovieSchema = Schema({
   title: String,
-  yearRelease: Number,
+  yearReleased: Number,
   star: String,
   comments: [ CommentSchema ],
   director: { type: ObjectID, ref: 'Person' },
   cast: [ { actor: person, character: person } ],
-  crew: [ { person: person, role: String } ]
+  crew: [ { person: person, role: String } ],
   // director: { type: ObjectID, ref: 'Person' },
   // cast: [ { actor: { type: ObjectID, ref: 'Person' }, character: String } ],
   // crew: [ { person: { type: ObjectID, ref: 'Person' }, role: String } ]
+
 });
 
 

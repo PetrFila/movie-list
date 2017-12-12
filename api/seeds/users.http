@@ -1,0 +1,22 @@
+### Register
+
+Send request
+POST http://localhost:7000/auth/register
+Content-Type: application/json
+
+{
+  "email": "john.brown@example.com",
+  "firstName": "John",
+  "lastName": "Brown",
+  "password": "password1"
+}
+
+### Signin
+Send request
+POST http://localhost:7000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "john.brown@example.com",
+  "password": "password1"
+}
